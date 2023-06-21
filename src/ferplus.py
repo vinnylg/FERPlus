@@ -12,9 +12,14 @@ import random as rnd
 from collections import namedtuple
 
 from PIL import Image
-from rect_util import Rect
-import img_util as imgu
 import matplotlib.pyplot as plt
+
+try:
+    from src.rect_util import Rect
+    import src.img_util as imgu
+except ImportError:
+    from rect_util import Rect
+    import img_util as imgu
 
 def display_summary(train_data_reader, val_data_reader, test_data_reader):
     '''

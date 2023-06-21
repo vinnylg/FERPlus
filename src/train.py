@@ -12,8 +12,12 @@ import argparse
 import numpy as np
 import logging
 
-from models import *
-from ferplus import *
+try:
+    from src.models import *
+    from src.ferplus import *
+except ImportError:
+    from models import *
+    from ferplus import *
 
 import cntk as ct
 
